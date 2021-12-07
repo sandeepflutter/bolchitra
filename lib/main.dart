@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
       'sri lanka',
       'bangladesh'
     ],
-    birthday: new DateTime.now(),
+    //birthday: new DateTime.now(),
     //childDirected: true,
   );
   _launchUrl(String url) {
@@ -133,6 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
               flex: 1,
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.85,
+                // ignore: missing_required_param
                 child: DrawerHeader(
                   decoration: BoxDecoration(
                       image: DecorationImage(
@@ -452,7 +453,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ).toList(),
                   onPageChanged: (index) {
                     setState(() {
-                      index;
+                      // index;
                     });
                   },
                 ),
@@ -468,7 +469,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ..load()
                         ..show(),
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => lazy()))
+                          builder: (BuildContext context) => Lazy()))
                     },
                     splashColor: Colors.transparent,
                     highlightColor: Colors.transparent,

@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class json1 extends StatefulWidget {
+class Json1 extends StatefulWidget {
   final int force;
-  const json1(this.force);
+  const Json1(this.force);
   @override
-  _json1 createState() => new _json1();
+  _Json1 createState() => new _Json1();
 }
 
-class _json1 extends State<json1> {
+class _Json1 extends State<Json1> {
   Future<Lazymodel1> fetchAlbum() async {
     int counter = widget.force + 1;
     final response = await http
@@ -38,7 +38,7 @@ class _json1 extends State<json1> {
     if (mediaQueryData.orientation == Orientation.landscape) {
       //landscape
       return Scaffold(
-        resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomInset: false,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(1.0), // here the desired height
           child: AppBar(
@@ -311,7 +311,7 @@ class _json1 extends State<json1> {
     }
     //porait
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(1.0), // here the desired height
         child: AppBar(

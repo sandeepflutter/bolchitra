@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import "package:google_fonts/google_fonts.dart";
 import 'package:bolchitra/ui/json1.dart';
 import 'package:linear_gradient/linear_gradient.dart';
-import 'package:http/http.dart' as http;
+//import 'package:http/http.dart' as http;
 
 var globalContext;
 
-class lazy extends StatelessWidget {
+class Lazy extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -18,21 +18,21 @@ class lazy extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: lazy1(),
+      home: Lazy1(),
     );
   }
 }
 
-class lazy1 extends StatefulWidget {
-  lazy1({Key key, this.title}) : super(key: key);
+class Lazy1 extends StatefulWidget {
+  Lazy1({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _lazy1 createState() => _lazy1();
+  _Lazy1 createState() => _Lazy1();
 }
 
-class _lazy1 extends State<lazy1> {
+class _Lazy1 extends State<Lazy1> {
   @override
   Widget build(BuildContext context) {
     var spacecrafts = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
@@ -41,7 +41,7 @@ class _lazy1 extends State<lazy1> {
     if (mediaQueryData.orientation == Orientation.landscape) {
       //landscape
       return Scaffold(
-        resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomInset: false,
         body: CustomScrollView(
           slivers: <Widget>[
             SliverAppBar(
@@ -142,7 +142,7 @@ class _lazy1 extends State<lazy1> {
                       ),
                       onTap: () {
                         Navigator.of(globalContext).push(MaterialPageRoute(
-                            builder: (BuildContext context) => json1(index)));
+                            builder: (BuildContext context) => Json1(index)));
                       },
                     );
                   },
@@ -154,7 +154,7 @@ class _lazy1 extends State<lazy1> {
     }
     //portate
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
@@ -256,7 +256,7 @@ class _lazy1 extends State<lazy1> {
                     onTap: () {
                       // final int i == $index;
                       Navigator.of(globalContext).push(MaterialPageRoute(
-                          builder: (BuildContext context) => json1(index)));
+                          builder: (BuildContext context) => Json1(index)));
                     },
                   );
                 },

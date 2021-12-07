@@ -5,15 +5,15 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
 
-class jsonbol extends StatefulWidget {
+class Jsonbol extends StatefulWidget {
   final int force;
-  const jsonbol(this.force);
+  const Jsonbol(this.force);
 
   @override
-  _jsonbol createState() => new _jsonbol();
+  _Jsonbol createState() => new _Jsonbol();
 }
 
-class _jsonbol extends State<jsonbol> {
+class _Jsonbol extends State<Jsonbol> {
   Future<List<Lazymodel>> getAllData() async {
     // int counter = 1;
     var api = "https://jsonplaceholder.typicode.com/photos/1";
@@ -43,7 +43,7 @@ class _jsonbol extends State<jsonbol> {
             automaticallyImplyLeading: false,
           ),
         ),
-        resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomInset: false,
         body: new ListView(
           children: <Widget>[
             new Container(
@@ -109,7 +109,7 @@ class _jsonbol extends State<jsonbol> {
     }
     //porait
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(1.0), // here the desired height
         child: AppBar(
